@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.header{
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.encabezado1{
+    display: flex;
+    width: 100%;
+}
+.cajaboton{
+    width: 20%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.titulo1{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    
+}
+.titulo1 h1{
+    font-weight: bolder;
+    font-size: 80px;
+    text-shadow: 2px 2px 5px #660099;
+
+}  .boton2{
+    height: 35px;
+    width: 100%;
+    border-radius: 4px;
+    color: #F5F5F5;
+    font-weight: normal;
+    background-color: #660099;
+    border: none;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.boton2:hover{
+    background-color: #3a0c50;
+}
+.imagen1{
+    float: center;
+    padding-left: 10px;
+    width: 50%;
+}
+.piedepagina{
+    text-align: center;
+    text-decoration: wavy;
+}
+.formulario{
+    width: 100%;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+.titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+.titulo h1{
+    font-weight: bolder;
+}
+.encabezado{
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.texto{
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 90%;
+    border-bottom: 2px solid rgb(207, 203, 203);
+}
+.texto b{
+    font-weight: bolder;
+    color: #660099;
+    padding-bottom: 10px;
+} 
+label{
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.identificacion{
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    word-wrap: normal;
+    color: gray;
+    border: 1px solid rgb(189, 189, 189) !important;
+
+}
+.numerocc{
+    padding-left: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(189, 189, 189) !important;
+
+}
+.boton1{
+    height: 35px;
+    width: 50%;
+    border-radius: 4px;
+    color: #F5F5F5;
+    font-weight: normal;
+    background-color: #660099;
+    border: none;
+    margin-bottom: 30px;
+    font-weight: bolder;
+}
+.boton1:hover{
+    background-color: #3a0c50;
+}
+
+.texto p{
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.texto ul{
+    list-style-type: circle;
+}
+.texto ul li{
+    text-align: left;
+}
+.texto ul p{
+    font-size: 15px;
+    margin-top: 0px;
+    text-align: left;
+    color: grey;
+}
+.texto ul h5{
+    text-align: left;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.jojo label p{
+    color: gray;
+    margin-bottom: 5px;
+}
+[class*="col-"] {
+    width: 100%;
+  }
+
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }

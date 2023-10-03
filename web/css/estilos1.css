@@ -1,0 +1,128 @@
+*{
+    padding :0%;
+    margin :0%;
+}
+body{
+    background-color: rgba(248,248,248,255);
+}
+.Encabezado{
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #660099;
+    color: white;
+    padding: 20px;
+    display: flex;
+}
+
+.nombreUser{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lista{
+    width:60%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+}
+.lista ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding-right: 18px;
+}
+.lista li{
+    background:none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.lista li:hover{
+    background-color: #3a0c50;
+
+}
+.lista li button{
+    color: white;
+    background:none;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.lista li button:hover{
+    background-color: #3a0c50;
+
+}
+
+.bi{
+    display: inline-block;
+    vertical-align: -0.125em;
+    fill: currentcolor;
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+}
+.bi-person{
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 3.5px;
+    margin-right: 8px;
+    color: white;
+}
+p{
+    color: white;
+    font-size: 16px;
+    padding: 3px;
+}
+.cuerpo{
+    padding: 1%;
+    margin: 2%;
+    background-color: rgba(238,238,238,255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+    color:#660099;
+    font-size: 30px;
+    margin: 10px;
+}
+h4{
+    padding-top: 20px;
+    font-size: 25px;
+}
+h5{
+    padding-top: 10px;
+    font-size: 15px;
+}
+.normal{
+    padding: 5px;
+    color: black;
+}
+.seleccion{
+    padding: 10px;
+    padding-left: 50px;
+
+}
+.opciones{
+    list-style: decimal;
+
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+

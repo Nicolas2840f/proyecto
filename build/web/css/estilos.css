@@ -1,0 +1,158 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body {
+    background-image: url(../Imagenes/photo-1494500764479-0c8f2919a3d8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.imagen-login{
+    width: 30%;
+    margin: 5%;
+}
+.container2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: auto;
+}
+.caja-grande{
+    padding: 2%;
+    width: 50%;
+    margin-top: 5%;
+    background-color: #f9e7fd;
+    border-radius: 8px;
+    box-shadow: 2px 10px 10px 2px black;
+}
+.caja-mediana{
+    width: 80%;
+    justify-content: center;
+    margin-left: 9%;
+}
+.cajitas{
+    background-color: #f9e7fd;
+    border: solid 1px #a07bc3;
+    margin-bottom: 5%;
+}
+.recorder{
+    color: gray;
+}
+.recorder-selected{
+    color: rgb(0, 0, 0);
+}
+.checkbox:checked{
+    background-color: #8775bc;
+    border-color: #6341c9;
+}
+.registrar{
+    display: flex;
+    width: 100%
+}
+.boton-checked{
+    width: 80%
+}
+.registro{
+    width: 20%;
+    justify-content: end;
+    text-align: end;
+
+}
+.registro a{
+    color: #6341c9;
+    text-decoration: none;
+}
+.registro a:hover{
+    color: blueviolet;
+}
+.botton-login{
+    display: flex;
+    justify-content: center;
+}
+.btn-login{
+    background-color: #6341c9;
+    color: white;
+
+}
+.btn-login:focus {
+    background-color: #000000;
+    color: rgb(255, 0, 0);
+
+}
+.invalido{
+    box-shadow: 1px 1px 3px 3px red;
+}
+
+/*Registro de Usuario*/
+
+.titulo{
+    padding: 5%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+
+}
+.titulo h1{
+    font-size: 36px;
+    color: #6600ff;
+    font-family: sans-serif;
+}
+.inicio a{
+    color: #6341c9;
+    text-decoration: none;
+}
+.volverLogin{
+    width: 100%;
+    display: flex;
+    padding: 2%;
+    justify-content: end;
+}
+.cajitas:focus{
+    box-shadow: 1px 1px 3px 3px #6341c9;
+}
+.cajitas1{
+    margin-bottom: 5%;
+}
+.cajitas2{
+    background-color: #f9e7fd;
+    border: solid 1px #a07bc3;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.cajitas2:focus{
+    box-shadow: 1px 1px 3px 3px #6341c9;
+}
+.cajaInvalida{
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+    background: none;
+    border: none;
+}
+.invalidate{
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
