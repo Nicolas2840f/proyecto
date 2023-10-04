@@ -145,16 +145,19 @@ public class ControladorAlmacen extends HttpServlet {
             case "Ingresar":
                 unAlmacen.insertar();
                 mensaje = "Registro insertado correctamente";
-                request.getRequestDispatcher("WEB-INF/Almacen.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Almacen.jsp").forward(request, response);
                 break;
             case "Modificar":
                 unAlmacen.modificar();
                 mensaje = "Registro modificado correctamente";
+                request.setAttribute("msj", mensaje);
                 request.getRequestDispatcher("WEB-INF/Almacen.jsp?msj=" + mensaje).forward(request, response);
                 break;
             case "Eliminar":
                 unAlmacen.eliminar();
                 mensaje = "Registro eliminado correctamente";
+                request.setAttribute("msj", mensaje);
                 request.getRequestDispatcher("WEB-INF/Almacen.jsp?msj=" + mensaje).forward(request, response);
                 break;
             default:

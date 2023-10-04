@@ -16,6 +16,13 @@
     <jsp:useBean id="unComputador" scope="request" class="Modelo.Computador" />
     <jsp:useBean id="unaPersona" scope="request" class="Modelo.Persona" />
     <body>
+        <div>
+            <% if(request.getAttribute("msj") != null){ %>
+            <div class="alert alert-warning">
+                <%=request.getAttribute("msj")%>
+            </div>
+                <%}%>
+        </div>
         <div class="header col-s-12 col-12">
             <img class="imagen1" src="Imagenes/Logo-3-04.png" alt="Sena">
         </div>

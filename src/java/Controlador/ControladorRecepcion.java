@@ -137,17 +137,20 @@ public class ControladorRecepcion extends HttpServlet {
             case "Ingresar":
                 unaRecepcion.insertar();
                 mensaje = "Registro insertado correctamente";
-                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp").forward(request, response);
                 break;
             case "Modificar":
                 unaRecepcion.modificar();
                 mensaje = "Registro modificado correctamente";
-                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp").forward(request, response);
                 break;
             case "Eliminar":
                 unaRecepcion.eliminar();
                 mensaje = "Registro eliminado correctamente";
-                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("/WEB-INF/Recepcion.jsp").forward(request, response);
                 break;
             default:
                 throw new AssertionError();

@@ -17,6 +17,13 @@
     </head>
     <jsp:useBean id="unObjeto" scope="request" class="Modelo.Objeto" />
     <body>
+        <div>
+            <% if(request.getAttribute("msj") != null){%>
+            <div class="alert alert-warning">
+                <%=request.getAttribute("msj")%>
+            </div>
+            <%}%>
+        </div>
         <div class="header col-s-12 col-12">
             <img class="imagen1" src="Imagenes/Logo-3-04.png" alt="Sena">
         </div>
@@ -34,9 +41,9 @@
                     <c:forEach items="${unObjeto.listar()}" var="objeto">
                         <tr>
                     <form action="ControladorObjeto" method="post">
-                        
+
                         <td><input type="hidden" name="fIdObjeto" value="${objeto.idObjeto}">
-                        <input type="text" name="fDescripcionObjeto" value="${objeto.descripcionObjeto}"></td>
+                            <input type="text" name="fDescripcionObjeto" value="${objeto.descripcionObjeto}"></td>
                         <td><input type="text" name="fCantidadObjeto" value="${objeto.cantidadObjeto}"></td>
                         <td><button type="submit" class="Regresar" name="fEnviar" value="Modificar">Modificar</button>
                             <button type="submit" class="Regresar" name="fEnviar" value="Eliminar">Eliminar</button>

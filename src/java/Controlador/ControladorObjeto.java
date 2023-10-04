@@ -94,18 +94,21 @@ public class ControladorObjeto extends HttpServlet {
         switch (accion) {
             case "Insertar":
                 elObjeto.insertar();
-                mensaje = "Insertado Correctamente";
-                request.getRequestDispatcher("WEB-INF/Objetos.jsp?msj=" + mensaje).forward(request, response);
+                mensaje = "Objeto insertado Correctamente";
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Objetos.jsp").forward(request, response);
                 break;
             case "Modificar":
                 elObjeto.modificar();
-                mensaje = "Modificado Correctamente";
-                request.getRequestDispatcher("WEB-INF/Objetos.jsp?msj=" + mensaje).forward(request, response);
+                mensaje = "Objeto modificado Correctamente";
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Objetos.jsp").forward(request, response);
                 break;
             case "Eliminar":
                 elObjeto.eliminar();
-                mensaje = "Eliminado Correctamente";
-                request.getRequestDispatcher("WEB-INF/Objetos.jsp?msj=" + mensaje).forward(request, response);
+                mensaje = "Objeto eliminado Correctamente";
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Objetos.jsp").forward(request, response);
                 break;
         }
 

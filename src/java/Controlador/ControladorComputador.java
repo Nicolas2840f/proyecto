@@ -100,23 +100,26 @@ public class ControladorComputador extends HttpServlet {
         unComputador.setColorComputador(color);
         unComputador.setComplementoComputador(complemento);
         unComputador.setIdPersona(idPersona);
-        
+
         String mensaje = "";
         switch (accion) {
             case "Insertar":
                 unComputador.insertar();
                 mensaje = "Insertado correctamente";
-                request.getRequestDispatcher("WEB-INF/Computadores.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Computadores.jsp").forward(request, response);
                 break;
             case "Eliminar":
                 unComputador.eliminar();
                 mensaje = "Eliminado correctamente";
-                request.getRequestDispatcher("WEB-INF/Computadores.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Computadores.jsp").forward(request, response);
                 break;
             case "Modificar":
                 unComputador.modificar();
                 mensaje = "Modificado correctamente";
-                request.getRequestDispatcher("WEB-INF/Computadores.jsp?msj=" + mensaje).forward(request, response);
+                request.setAttribute("msj", mensaje);
+                request.getRequestDispatcher("WEB-INF/Computadores.jsp").forward(request, response);
                 break;
             default:
                 throw new AssertionError();

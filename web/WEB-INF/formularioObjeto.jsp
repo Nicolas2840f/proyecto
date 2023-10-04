@@ -73,10 +73,7 @@
                         if (!form.checkValidity()) {
                             event.preventDefault()
                             event.stopPropagation()
-                        }else{
-                            alert("Objeto Ingresado con éxito");
                         }
-
                         form.classList.add('was-validated');
                         
                     }, false)
