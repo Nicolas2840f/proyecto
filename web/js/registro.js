@@ -5,9 +5,12 @@ validarDocumento = () => {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const p = document.getElementById("cajaValidarD");
+            var cajita = document.getElementById("fDocumento");
             if (xhr.responseText === "true" && cajaDocumento !== "") {
+                cajita.classList.add("invalido");
                 p.textContent = "Este documento ya ha sido registrado anteriormente";
             } else {
+                cajita.classList.remove("invalido");
                 p.textContent = "";
             }
         }
@@ -39,16 +42,34 @@ validarCorreo = () => {
     xhr.send(datos);
 };
 
-const password = document.getElementById("password");
-const passwordConfirmation = document.getElementById("password-confirmation");
-const mensaje = document.getElementById("mensaje");
-passwordConfirmation.addEventListener("keyup", () => {
-    if (password.value === passwordConfirmation.value) {
-        mensaje.innerHTML = "Las contraseñas coinciden";
-        mensaje.style.color = "#00dc06";
+const contraseña2 = document.getElementById("password-confirmation");
+const contraseña = document.getElementById("password");
+const mensajeContra = document.getElementById("cajaValidarContra");
+const mensajeConfirmacion = document.getElementById("cajaValidarConfir");
+
+
+contraseña2.addEventListener("keyup", () => {
+    if (contraseña2.value === contraseña.value) {
+        contraseña.classList.remove("invalido");
+        contraseña2.classList.remove("invalido");
+        mensajeConfirmacion.textContent = "";
+        mensajeContra.textContent = "";
     } else {
-        mensaje.innerHTML = "Las contraseñas no coinciden";
-        mensaje.style.color = "#b50000";
+        contraseña.classList.add("invalido");
+        contraseña2.classList.add("invalido");
+        mensajeConfirmacion.textContent = "Las contraseñas no coinciden";
+    }
+});
+contraseña.addEventListener("keyup", () => {
+    mensajeContra.textContent = "";
+    if (contraseña2.value === contraseña.value) {
+        contraseña.classList.remove("invalido");
+        contraseña2.classList.remove("invalido");
+        mensajeConfirmacion.textContent = "";
+    } else {
+        contraseña.classList.add("invalido");
+        contraseña2.classList.add("invalido");
+        mensajeConfirmacion.textContent = "Las contraseñas no coinciden";
     }
 });
 
@@ -69,10 +90,6 @@ formulario.addEventListener("submit", (e) => {
         const mensajedocumento = document.getElementById("cajaValidarD");
         mensajedocumento.textContent = "El documento ingresado debe ser mayor a 8 digitos";
         e.preventDefault();
-        documento.addEventListener('change', (e) => {
-            documento.classList.remove('invalido');
-            mensajedocumento.textContent = "";
-        });
     } else {
         documento.classList.remove('invalido');
     }
@@ -89,31 +106,31 @@ formulario.addEventListener("submit", (e) => {
     } else {
         tipoDocumento.classList.remove('invalido');
     }
-    
+
     const nombreValido = /^[A-Za-zá-úñ]+ [a-zA-Zá-úñ]+ ([a-zA-Zá-úñ]+)? ?([a-zA-Zá-úñ]+)?$/;
-    if(!nombreValido.test(nombre.value)){
+    if (!nombreValido.test(nombre.value)) {
         nombre.classList.add("invalido");
         const mensajenombre = document.getElementById("cajaValidarN");
         mensajenombre.textContent = "Escriba su nombre completo ej:Pepito Pérez Acuña ";
         e.preventDefault();
-        nombre.addEventListener('change',()=>{
+        nombre.addEventListener('change', () => {
             nombre.classList.remove("invalido");
             mensajenombre.textContent = "";
         });
-    }else{
+    } else {
         nombre.classList.remove("invalido");
     }
-    
-    if(telefono.value.length < 10 || telefono.value.length > 10){
+
+    if (telefono.value.length < 10 || telefono.value.length > 10) {
         telefono.classList.add("invalido");
         const mensajeTelefono = document.getElementById("cajaValidarT");
         mensajeTelefono.textContent = "El numero de telefono debe tener 10 caracteres";
         e.preventDefault();
-        telefono.addEventListener('change',()=>{
+        telefono.addEventListener('change', () => {
             telefono.classList.remove("invalido");
             mensajeTelefono.textContent = "";
         });
-    }else{
+    } else {
         telefono.classList.remove("invalido");
     }
 
@@ -132,5 +149,22 @@ formulario.addEventListener("submit", (e) => {
         correo.classList.remove("invalido");
         p2.textContent = "";
     }
+    if (contraseña.value === "") {
+        contraseña.classList.add("invalido");
+        mensajeContra.textContent = "La contraseña no puede ser un valor vacío";
+        e.preventDefault();
+    } else {
+        contraseña.classList.remove("invalido");
+        mensajeContra.textContent = "";
+    }
+    if (contraseña2.value === "") {
+        contraseña2.classList.add("invalido");
+        mensajeConfirmacion.textContent = "La confirmación de la contraseña es obligatoria";
+        e.preventDefault();
+    } else {
+        contraseña2.classList.remove("invalido");
+        mensajeConfirmacion.textContent = "";
+    }
+
 });
 

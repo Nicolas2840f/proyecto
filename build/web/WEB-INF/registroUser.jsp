@@ -53,10 +53,11 @@
                         </div>
                         <div class="cajitas1">
                             <input id="password" class="form-control cajitas2" name="fPassword" type="password" placeholder="Contraseña">
+                            <div id="cajaValidarContra" class="cajaInvalida"></div>
                         </div>
                         <div class="cajitas1">
                             <input id="password-confirmation" class="form-control cajitas2" name="fConfirmacionPassword" type="password"  placeholder="Confirmación Contraseña">
-                            <div id="mensaje"></div>
+                            <div id="cajaValidarConfir" class="cajaInvalida"></div>
                         </div>
                         <div class="botton-login">
                             <button class="btn-login btn" type="submit" name="fEnviar" value="Registrar">Registrarme</button>
