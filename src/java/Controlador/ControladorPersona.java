@@ -139,7 +139,6 @@ public class ControladorPersona extends HttpServlet {
                 respuesta = String.valueOf(unaPersona.validarCorreo());
                 response.setContentType("text/plain");
                 response.getWriter().write(respuesta);
-                System.out.println(respuesta);
                 break;
             default:
                 System.out.println("No entro a ningun case");
